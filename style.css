@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+  body {
+  font-family: sans-serif;
+  }
+  
+  .statCard:nth-child(3n+1){
+    background: linear-gradient(270deg, rgba(253,190,149,1) 0%, rgba(255,105,130,1) 100%);
+  }
+  .statCard:nth-child(3n+2){
+    background: linear-gradient(90deg, rgba(139,202,243,1) 0%, rgba(18,142,225,1) 100%);
+  }
+  .statCard:nth-child(3n+3){
+    background: linear-gradient(90deg, rgba(125,218,210,1) 0%, rgba(2,209,182,1) 100%);
+  }
+
+
+.statCard {
+  display: inline-block;
+  margin: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  width: 100%;
+  
+
+  padding: 35px 30px;
+  border-radius: 5px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: gray;
+  color:  white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.statCard::before,
+.statCard::after {
+  --circle-size: 240px;
+
+  display: block;
+  content: '';
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+
+  position: absolute;
+}
+.statCard::before {
+  top: -100px;
+  right: -110px;
+}
+.statCard::after {
+  bottom: -120px;
+  right: -50px;
+}
+
+.cardHeader {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardStatisric{
+  margin-bottom: 1.8em;
+  font-size: 1.5em;
+  
+
+}
